@@ -1,0 +1,60 @@
+@mixin text-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+html,
+body {
+  height: auto;
+}
+
+.popup {
+  width: 400px;
+  border: 1px solid #decccc;
+  margin: 4px;
+  padding: 8px;
+  border-radius: 4px;
+
+  .operations {
+    font-size: 20px;
+    display: flex;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #d4bebe;
+
+    > .ant-btn {
+      margin-right: 8px;
+    }
+  }
+
+  .content {
+    max-height: 500px;
+    overflow: auto;
+    margin-top: 10px;
+
+    .ant-checkbox-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .ant-checkbox-wrapper {
+      margin-left: 0;
+      margin-right: 8px;
+    }
+
+    .tab-item {
+      padding-right: 4px;
+      display: flex;
+      cursor: pointer;
+
+      &-title {
+        @include text-ellipsis;
+        flex: auto;
+
+        &:hover {
+          color: blue;
+        }
+      }
+    }
+  }
+}

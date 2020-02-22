@@ -1,0 +1,17 @@
+{
+  "manifest_version": 2,
+  "name": "ReadLater",
+  "version": "1.0",
+  "description": "Read Later or Download",
+  "icons": {
+    "48": "icons/cookie-48.png"
+  },
+  "permissions": ["tabs", "storage"],
+  "browser_action": {
+    "default_icon": {
+      "48": "icons/cookie-48.png"
+    },
+    "default_title": "RD",
+    "default_popup": "index.html"
+  }
+}
