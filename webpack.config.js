@@ -4,10 +4,10 @@ const HTMLWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     // mode: 'production',
-    mode: "development",
+    mode: 'development',
     entry: {
-        popup: './src/index.js',
-        test: "./src/test.ts"
+        popup: './src/index.ts',
+        background: "./src/background.ts",
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -16,6 +16,9 @@ module.exports = {
     devServer:{
         hot: true,
         open: true
+    },
+    resolve: {
+        extensions: ['.ts', '.js', '.tsx', '.jsx', '.scss', '.css']
     },
     devtool: 'source-map',
     watch: true,
@@ -88,8 +91,5 @@ module.exports = {
     },
     plugins: [
         new MiniCssExtractPlugin(),
-        new HTMLWebpackPlugin({
-            template: './index.html'
-        })
     ]
 };

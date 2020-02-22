@@ -8,6 +8,7 @@
     "css-loader": "^3.4.2",
     "eslint": "^6.8.0",
     "eslint-plugin-react": "^7.18.3",
+    "lodash": "^4.17.15",
     "mini-css-extract-plugin": "^0.9.0",
     "node-sass": "^4.13.1",
     "react": "^16.12.0",
@@ -23,14 +24,21 @@
     "@babel/preset-env": "^7.8.4",
     "@babel/preset-react": "^7.8.3",
     "@svgr/webpack": "^5.1.0",
+    "@types/antd": "^1.0.0",
+    "@types/chrome": "0.0.96",
+    "@types/lodash": "^4.14.149",
+    "@types/react-dom": "^16.9.5",
     "babel-loader": "^8.0.6",
+    "eslint-config-prettier": "^6.10.0",
     "eslint-loader": "^3.0.3",
+    "eslint-plugin-prettier": "^3.1.2",
     "html-webpack-plugin": "^3.2.0",
+    "prettier": "^1.19.1",
     "ts-loader": "^6.2.1",
     "typescript": "^3.8.2"
   },
   "scripts": {
-    "start": "webpack"
+    "start": "cp static/** dist && webpack"
   },
   "keywords": [],
   "author": "",
